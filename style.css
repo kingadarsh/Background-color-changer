@@ -1,0 +1,71 @@
+/* Specific colors for each button
+#red {
+    background-color: red;
+}
+#green {
+    background-color: #3CB04C;
+}
+#blue {
+    background-color: #3944bc;
+}
+
+
+.button {
+    color: azure;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#red:hover, #green:hover, #blue:hover {
+    background-color: #808080;
+    font-size: 18px;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 50px; 
+} */
+
+/* Style for the buttons */
+.button {
+    color: azure; /* Text color */
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: #3CB04C;
+}
+
+#blue {
+    background-color: #3944bc;
+}
+
+/* Change button color on hover */
+.button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Active button (when clicked) */
+.active {
+    background-color: grey;
+    color: white;
+}

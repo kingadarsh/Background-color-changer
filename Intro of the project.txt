@@ -1,0 +1,7 @@
+what i understand is that i need to make some different color buttons which represents different colors and once i press thm the background color should change respectively as that of the color of button
+
+
+You'll create different buttons for various colors, such as red, green, blue, etc.
+When a button is clicked, the background color of the page should change to match the color of the button.
+Additionally, you also need to allow the user to add custom colors to the color panel. This means the user should be able to input a color, and that new color should also appear as a button in the panel, which they can click to change the background to that custom color.
+
