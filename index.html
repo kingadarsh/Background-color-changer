@@ -1,42 +1,28 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backgrund-color-changer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-
-    <div class="button-container" id="button-container">
-        <button id="red" class="button"   type="button">Red</button>
-        <button id="green" class="button" type="button">Green</button>
-        <button id="blue" class="button"  type="button">Blue</button>
-    </div>
-
-<script src="script.js"></script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backgrund-color-changer</title>
+    <title>Background-color-changer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-
-    <div class="button-container" id="button-container">
-        <button id="red" class="button"   type="button">Red</button>
-        <button id="green" class="button" type="button">Green</button>
-        <button id="blue" class="button"  type="button">Blue</button>
+    <div>
+        <form>
+            <label for="input">Enter the color</label>
+            <input id="input" type="text"> 
+            <button id="addbutton" type="button">Submit</button>
+        </form>
     </div>
 
-<script src="script.js"></script>
+    <div class="button-container" id="button-container">
+        <button id="red" class="button" type="button">Red</button>
+        <button id="green" class="button" type="button">Green</button>
+        <button id="blue" class="button" type="button">Blue</button>
+        <button style="color:black;border: solid;height: 35px;" id="white" class="button" type="button">None/ White</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
