@@ -1,3 +1,58 @@
+/* Set a gradient background for body */
+body {
+    background-color: #f0f0f0; /* Light gray background for the body */
+    font-family: Arial, sans-serif; /* Change the font for better readability */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Container styles for input and submit button */
+.input-container {
+    display: flex;
+    flex-direction: column; /* Stack label, input, and button vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Space from the top */
+}
+
+/* Styles for the form elements */
+label {
+    font-size: 20px; /* Increase font size of the label */
+    margin-bottom: 10px; /* Space between label and input */
+    font-family: 'Arial', sans-serif; /* Change font family to Arial */
+    font-weight: bold; /* Make the font bold */
+    color: #333; /* Darker color for better readability */
+    text-align: center; /* Center the label text */
+}
+
+
+input {
+    padding: 10px; /* Padding inside the input box */
+    border-radius: 5px; /* Rounded corners for input */
+    border: 1px solid #ccc; /* Light border for input */
+    margin-bottom: 10px; /* Space between input and button */
+    width: 200px; /* Fixed width for the input */
+}
+
+/* Button styles for the submit button */
+button#addbutton {
+    padding: 10px; /* Match padding with input box */
+    border-radius: 5px; /* Match border radius with input box */
+    border: 1px solid #ccc; /* Match border with input box */
+    background-color: #007bff; /* Blue background for the submit button */
+    color: white; /* White text color */
+    width: 200px; /* Make button the same width as input box */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 16px; /* Larger text size */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Change background color on hover for the submit button */
+button#addbutton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button styles for each color */
 #red {
     background-color: red;
 }
@@ -12,20 +67,43 @@
     color: black; /* Ensure white button's text is always visible */
 }
 
+/* General button styles */
 .button {
     color: azure;
     border: none;
-    width: 80px;
-    height: 30px;
-    border-radius: 5px;
+    width: 100px; /* Slightly wider buttons */
+    height: 40px; /* Slightly taller buttons */
+    border-radius: 8px; /* Rounder corners for buttons */
     cursor: pointer;
+    font-size: 16px; /* Larger text size */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-#red:hover, #green:hover, #blue:hover, #white:hover {
-    background-color: #808080;
-    font-size: 18px;
+/* Hover effect for buttons */
+.button:hover {
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
+/* Specific hover effects for color buttons */
+#red:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+#green:hover {
+    background-color: #28a745; /* Darker green on hover */
+}
+
+#blue:hover {
+    background-color: #1e3f72; /* Darker blue on hover */
+}
+
+#white:hover {
+    background-color: lightgray; /* Light gray for white button on hover */
+}
+
+/* Container styles for buttons */
 .button-container {
     display: flex;
     justify-content: center; 
