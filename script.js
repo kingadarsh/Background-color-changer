@@ -99,23 +99,35 @@ function resetbuttonstyle() {
             button.style.backgroundColor = "white";
             button.style.color = "black"; // Text color to black
         } else {
-            button.style.backgroundColor = button.id; // Reset to the button's original background color
-            button.style.color = "azure"; // Reset text color
+            button.style.color = "azure"; // Reset text color to azure
+            // Reset button color to its own ID (which corresponds to its color)
+            button.style.backgroundColor = button.id; 
         }
     });
 }
 
 // Add event listener to the Add button
 document.getElementById("addbutton").addEventListener("click", (event) => {
-    const value = document.getElementById("input").value; // Get value from input field
+    const value = document.getElementById("input").value.trim().toLowerCase(); // Get value from input field and normalize to lowercase
+    const label = document.querySelector('label[for="input"]'); // Select the label element
+
+    // Validate if the value is not empty
+    if (value === '') {
+        alert('Please enter a valid color!'); // Alert user for invalid input
+        return; // Stop the function if input is empty
+    }
+
     const container = document.getElementById("button-container");
 
     // Create new button dynamically
     const button = document.createElement("button");
-    button.setAttribute("id", value);
-    button.classList.add("button");
-    button.textContent = value.charAt(0).toUpperCase() + value.slice(1); // Button text as capitalized color name
-    container.appendChild(button);
+    button.setAttribute("id", value); // Set the button's ID to the color name
+    button.classList.add("button"); // Add the "button" class
+    button.textContent = value.charAt(0).toUpperCase() + value.slice(1); // Capitalize the button text
+
+    // Set the button's background color to the specified color
+    button.style.backgroundColor = value; // Set the button's background color to the input color
+    container.appendChild(button); // Add the button to the container
 
     // Add click event to the new button
     button.addEventListener("click", () => {
@@ -124,6 +136,13 @@ document.getElementById("addbutton").addEventListener("click", (event) => {
         resetbuttonstyle(); // Reset all buttons
         button.style.backgroundColor = "grey"; // Highlight the clicked button
         button.style.color = "white"; // Change text color for visibility
+
+        // Check if the background is black and change the label text color
+        if (value === "black") {
+            label.style.color = "white"; // Change label text color to white
+        } else {
+            label.style.color = "black"; // Change label text color back to black for other colors
+        }
     });
 
     // Reset the input field after adding the button
@@ -135,6 +154,8 @@ const buttons = document.querySelectorAll(".button");
 
 // Add click event to each existing button
 buttons.forEach(button => {
+    const label = document.querySelector('label[for="input"]'); // Select the label element
+
     button.addEventListener("click", () => {
         const color = button.id; // Get the color from the button's ID
 
@@ -148,6 +169,13 @@ buttons.forEach(button => {
         if (button.id === "white") {
             button.style.backgroundColor = "lightgray"; // Light gray instead of white when active
             button.style.color = "black"; // Ensure text is visible
+        }
+
+        // Check if the background is black and change the label text color
+        if (color === "black") {
+            label.style.color = "white"; // Change label text color to white
+        } else {
+            label.style.color = "black"; // Change label text color back to black for other colors
         }
     });
 });
